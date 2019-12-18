@@ -8,10 +8,10 @@ import subprocess
 #from dep_pipeline.core import common
 
 
-from keckdrpframework.primitives.base_primitive import Base_primitive
+from keckdrpframework.primitives.base_primitive import BasePrimitive
 from keckdrpframework.models.arguments import Arguments
 
-class dep_add(Base_primitive):
+class dep_add(BasePrimitive):
     """
     Add the weather and focus log files to the ancillary directory.  
     Log files are copied from either /h/nightly#/yy/mm/dd or /s/nightly#/yy/mm/dd.
@@ -23,7 +23,7 @@ class dep_add(Base_primitive):
     #todo: make dep_add smarter about finding misplaced files and deal with corrupted files
 
     def __init__(self, action, context):
-        Base_primitive.__init__(self, action, context)
+        BasePrimitive.__init__(self, action, context)
         # shorthand
 
         self.instr = self.context.instrObj.instr

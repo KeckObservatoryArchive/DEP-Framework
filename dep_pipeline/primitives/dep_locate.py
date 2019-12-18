@@ -13,7 +13,7 @@
   Ported to Python3 by Matthew Brown, Josh Riley
 """
 
-from keckdrpframework.primitives.base_primitive import Base_primitive
+from keckdrpframework.primitives.base_primitive import BasePrimitive
 from keckdrpframework.models.arguments import Arguments
 
 import calendar as cal               ## Used to convert a time object into a number of seconds
@@ -30,7 +30,7 @@ import subprocess
 
 
 
-class dep_locate(Base_primitive):
+class dep_locate(BasePrimitive):
     """
     This function will search the data directories for FITS data written in the last 24hours.
     Copies FITS file to staging area. Creates the following files in stageDir:
@@ -43,7 +43,7 @@ class dep_locate(Base_primitive):
 
 
     def __init__(self, action, context):
-        Base_primitive.__init__(self, action, context)
+        BasePrimitive.__init__(self, action, context)
         #shorthand
         self.tpx=0
 

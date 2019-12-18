@@ -22,9 +22,9 @@ import hashlib
 import configparser
 from astropy.io import fits
 
-from keckdrpframework.primitives.base_primitive import Base_primitive
+from keckdrpframework.primitives.base_primitive import BasePrimitive
 
-class dep_dqa(Base_primitive):
+class dep_dqa(BasePrimitive):
     """
     This function will analyze the FITS file to determine if they will be
     archived and if they need modifications or additions to their headers.
@@ -34,7 +34,7 @@ class dep_dqa(Base_primitive):
     """
 
     def __init__(self, action, context):
-        Base_primitive.__init__(self, action, context)
+        BasePrimitive.__init__(self, action, context)
         # shorthand
 
         self.instr = self.context.instrObj.instr

@@ -3,10 +3,10 @@ from datetime import datetime as dt, timedelta
 from dep_pipeline.core.common import get_api_data
 import subprocess
 
-from keckdrpframework.primitives.base_primitive import Base_primitive
+from keckdrpframework.primitives.base_primitive import BasePrimitive
 from keckdrpframework.models.arguments import Arguments
 
-class dep_obtain(Base_primitive):
+class dep_obtain(BasePrimitive):
     """
     Queries the telescope schedule database and creates the following files in stageDir:
 
@@ -18,7 +18,7 @@ class dep_obtain(Base_primitive):
     """
 
     def __init__(self, action, context):
-        Base_primitive.__init__(self, action, context)
+        BasePrimitive.__init__(self, action, context)
         self.instrObj = self.context.instrObj
         self.logger.info('dep_obtain: started for {} {} UT'.format(self.instrObj.instr, self.instrObj.utDate))
 

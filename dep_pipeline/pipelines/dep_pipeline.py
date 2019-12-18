@@ -3,13 +3,13 @@ This is a template pipeline.
 
 """
 
-from keckdrpframework.pipelines.base_pipeline import Base_pipeline
+from keckdrpframework.pipelines.base_pipeline import BasePipeline
 from ..primitives.dep_obtain import *
 from ..primitives.dep_locate import *
 from ..primitives.dep_add import *
 from ..primitives.dep_dqa import *
 
-class dep_pipeline(Base_pipeline):
+class dep_pipeline(BasePipeline):
     """
     The template pipeline.
     """
@@ -35,7 +35,7 @@ class dep_pipeline(Base_pipeline):
         """
         Constructor
         """
-        Base_pipeline.__init__(self)
+        BasePipeline.__init__(self)
 
     def template_action(self, action, context):
         print("Template action", action)

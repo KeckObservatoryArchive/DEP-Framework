@@ -2,3 +2,7 @@
 *.egg_info
 *egg_info*
 *egg-info*
+*.log
+__pycache__
+*.pyc
+
